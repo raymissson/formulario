@@ -37,9 +37,6 @@
 		if($result->num_rows>0){
 			while ($row = $result->fetch_assoc()) {
 				$total=$total+$row["valor_compra"];
-				//echo "Nome: ".$row["nome"]." | ";
-				//echo "Valor: ".$row["valor_compra"]." | ";
-				//echo "Data: ",date('d/m/Y', strtotime($row["Data"])),"<br>";
 				if($total >= 99){
 					$fixo = 0.02 * 160;
 					$resultado = $resultado+$fixo;
